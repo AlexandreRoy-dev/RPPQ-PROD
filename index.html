@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPPQ - Réseau des Prêteurs Privés du Québec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#071630', 
+                        snow: '#FFFAFA',
+                        accent: '#3b82f6', 
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #071630;
+            color: #FFFAFA;
+            overflow-x: hidden;
+        }
+        
+        /* Gestionnaire de transition très précis pour éviter les sauts d'écran */
+        .view-section {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col relative z-0">
+
+    <!-- Image de fond globale (Accueil) -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <!-- Opacité à 15% (le juste milieu parfait) -->
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Architecture fond" class="w-full h-full object-cover opacity-[0.15] grayscale mix-blend-luminosity">
+        <!-- Overlay dégradé rééquilibré -->
+        <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/60 to-navy/10"></div>
+    </div>
+
+    <!-- En-tête / Navbar -->
+    <header class="w-full px-6 py-8 sm:px-12 flex justify-between items-center z-50 absolute top-0 left-0">
+        <!-- Espace Logo -->
+        <div class="cursor-pointer flex items-center gap-4" onclick="switchView('home-view')">
+            <!-- Remplacer le src par le chemin réel de votre logo -->
+            <img src="logo.png" alt="Logo RPPQ" class="h-16 w-auto object-contain" onerror="this.style.display='none'">
+            <!-- Le texte s'affiche en renfort ou si le logo est absent -->
+            
+        </div>
+
+        <!-- Section Téléphone -->
+        <div class="flex items-center">
+            <a href="tel:+14509128877" class="flex items-center gap-2 text-gray-300 hover:text-snow transition-colors duration-300 group">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-70 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span class="text-sm md:text-base font-medium tracking-wider">(450) 912-8877</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Conteneur principal -->
+    <main class="flex-grow flex items-center justify-center relative w-full px-4 sm:px-8 mt-24 md:mt-0 pb-12">
+
+        <!-- ==================== VUE : ACCUEIL ==================== -->
+        <div id="home-view" class="view-section flex flex-col items-center justify-center w-full max-w-5xl opacity-100 translate-y-0">
+            
+            <div class="text-center mb-16 relative">
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">La référence en prêt privé<br><span class="text-gray-400 font-light">au Québec.</span></h2>
+                <p class="text-sm md:text-base tracking-widest uppercase text-gray-500">Réseau des Prêteurs Privés du Québec</p>
+            </div>
+
+            <!-- Boutons de sélection de profil -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-3xl relative z-10">
+                <button onclick="switchView('investisseur-view')" class="group text-left border border-white/20 bg-navy/80 backdrop-blur-sm hover:bg-white/10 p-8 rounded-sm transition-colors duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Investisseur</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Déployez vos liquidités à travers des opportunités adossées à des garanties immobilières tangibles.</p>
+                </button>
+
+                <button onclick="switchView('preteur-view')" class="group text-left border border-white/20 bg-navy/80 backdrop-blur-sm hover:bg-white/10 p-8 rounded-sm transition-colors duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Prêteur Partenaire</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">Rejoignez notre réseau syndiqué pour accéder à un flux de transactions qualifiées et structurées.</p>
+                </button>
+            </div>
+        </div>
+
+        <!-- ==================== VUE : INVESTISSEUR ==================== -->
+        <div id="investisseur-view" class="view-section hidden w-full max-w-6xl opacity-0 translate-y-8">
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center w-full">
+                
+                <!-- Colonne Texte -->
+                <div class="flex-1 flex flex-col items-start justify-center w-full">
+                    <div class="mb-10">
+                        <p class="text-xs tracking-widest uppercase text-gray-500 mb-2">Profil</p>
+                        <h2 class="text-3xl md:text-4xl font-bold">Investisseur</h2>
+                    </div>
+                    
+                    <div class="flex flex-col gap-6 w-full mb-10">
+                        <div class="border-t border-white/20 pt-4">
+                            <h4 class="text-sm uppercase tracking-wider text-gray-400 mb-2">Garanties</h4>
+                            <p class="text-sm leading-relaxed">Inscription hypothécaire de 1er ou 2e rang sur des actifs immobiliers évalués par des firmes indépendantes.</p>
+                        </div>
+                        <div class="border-t border-white/20 pt-4">
+                            <h4 class="text-sm uppercase tracking-wider text-gray-400 mb-2">Rendements</h4>
+                            <p class="text-sm leading-relaxed">Taux d'intérêts fixes avec distributions mensuelles prévisibles. Termes de 6 à 24 mois.</p>
+                        </div>
+                        <div class="border-t border-white/20 pt-4">
+                            <h4 class="text-sm uppercase tracking-wider text-gray-400 mb-2">Gestion</h4>
+                            <p class="text-sm leading-relaxed">Prise en charge intégrale de la structure légale, de la documentation et de la perception.</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center border border-white/20 p-6 rounded-sm bg-[#0a1f44]/50 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-snow">Accès aux dossiers</h4>
+                            <p class="text-sm text-gray-400 mt-1">Soumettez vos critères pour une consultation.</p>
+                        </div>
+                        <a href="#contact-investisseur" class="px-6 py-3 bg-snow text-navy text-sm font-semibold hover:bg-gray-200 transition-colors whitespace-nowrap">
+                            Nous contacter
+                        </a>
+                    </div>
+
+                    <button onclick="switchView('home-view')" class="mt-8 text-sm text-gray-500 hover:text-snow transition-colors flex items-center">
+                        &larr; Retour à l'accueil
+                    </button>
+                </div>
+
+                <!-- Colonne Image -->
+                <div class="flex-1 hidden lg:block w-full relative h-[600px]">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop" alt="Bureaux institutionnels" class="w-full h-full object-cover grayscale opacity-70 border border-white/10 rounded-sm">
+                    <div class="absolute inset-0 bg-navy/30 mix-blend-multiply rounded-sm"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== VUE : PRÊTEUR ==================== -->
+        <div id="preteur-view" class="view-section hidden w-full max-w-6xl opacity-0 translate-y-8">
+            <div class="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center w-full">
+                
+                <!-- Colonne Texte -->
+                <div class="flex-1 flex flex-col items-start justify-center w-full">
+                    <div class="mb-10">
+                        <p class="text-xs tracking-widest uppercase text-gray-500 mb-2">Profil</p>
+                        <h2 class="text-3xl md:text-4xl font-bold">Prêteur Partenaire</h2>
+                    </div>
+                    
+                    <div class="flex flex-col gap-6 w-full mb-10">
+                        <div class="border-t border-white/20 pt-4">
+                            <h4 class="text-sm uppercase tracking-wider text-gray-400 mb-2">Volume d'affaires</h4>
+                            <p class="text-sm leading-relaxed">Accès à un deal flow constant de transactions commerciales et résidentielles pré-analysées.</p>
+                        </div>
+                        <div class="border-t border-white/20 pt-4">
+                            <h4 class="text-sm uppercase tracking-wider text-gray-400 mb-2">Due Diligence</h4>
+                            <p class="text-sm leading-relaxed">Chaque dossier est soumis à une vérification rigoureuse (crédit, évaluation, stratégie de sortie).</p>
+                        </div>
+                        <div class="border-t border-white/20 pt-4">
+                            <h4 class="text-sm uppercase tracking-wider text-gray-400 mb-2">Syndication</h4>
+                            <p class="text-sm leading-relaxed">Possibilité de co-participation sur des financements majeurs pour diluer le ratio de risque.</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center border border-white/20 p-6 rounded-sm bg-[#0a1f44]/50 gap-4">
+                        <div>
+                            <h4 class="font-semibold text-snow">Intégration au réseau</h4>
+                            <p class="text-sm text-gray-400 mt-1">Entamez le processus d'accréditation RPPQ.</p>
+                        </div>
+                        <a href="#contact-preteur" class="px-6 py-3 bg-transparent border border-snow text-snow text-sm font-semibold hover:bg-snow hover:text-navy transition-colors whitespace-nowrap">
+                            Soumettre une demande
+                        </a>
+                    </div>
+
+                    <button onclick="switchView('home-view')" class="mt-8 text-sm text-gray-500 hover:text-snow transition-colors flex items-center">
+                        &larr; Retour à l'accueil
+                    </button>
+                </div>
+
+                <!-- Colonne Image -->
+                <div class="flex-1 hidden lg:block w-full relative h-[600px]">
+                    <img src="./preteur.jpeg" alt="Architecture corporative" class="w-full h-full object-cover  opacity-100 border border-white/10 rounded-sm">
+                    <div class="absolute inset-0 bg-navy/30 mix-blend-multiply rounded-sm"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="w-full text-center p-6 border-t border-white/10 mt-auto relative z-10 bg-navy/50 backdrop-blur-sm">
+        <a href="politique-de-confidentialite.html" class="text-xs text-gray-600 hover:text-gray-300 transition-colors uppercase tracking-widest">
+            Confidentialité & Mentions légales
+        </a>
+    </footer>
+
+    <!-- Script de navigation -->
+    <script>
+        function switchView(targetId) {
+            const activeView = document.querySelector('.view-section:not(.hidden)');
+            const targetView = document.getElementById(targetId);
+
+            if (!activeView || activeView.id === targetId) return;
+
+            // 1. Début de l'animation de sortie
+            activeView.classList.remove('opacity-100', 'translate-y-0');
+            activeView.classList.add('opacity-0', 'translate-y-8');
+
+            // 2. Attendre la fin de la transition CSS (400ms)
+            setTimeout(() => {
+                activeView.classList.add('hidden');
+                activeView.classList.remove('flex');
+
+                targetView.classList.remove('hidden');
+                targetView.classList.add('flex');
+                
+                // Forcer le navigateur à recalculer
+                void targetView.offsetWidth;
+
+                // 3. Lancer l'animation d'entrée
+                targetView.classList.remove('opacity-0', 'translate-y-8');
+                targetView.classList.add('opacity-100', 'translate-y-0');
+            }, 400); 
+        }
+    </script>
+</body>
+</html>
