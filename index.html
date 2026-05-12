@@ -47,7 +47,7 @@
 
     <header class="w-full px-6 py-8 sm:px-12 flex justify-between items-center z-50 absolute top-0 left-0">
     <div class="cursor-pointer flex items-center gap-4" onclick="switchView('home-view')">
-    <img src="logo.png" alt="Logo RPPQ" class="h-24 md:h-32 w-auto object-contain transition-all duration-300" onerror="this.style.display='none'">
+    <img src="logo.png" alt="Logo RPPQ" class="h-24 md:h-30 w-auto object-contain transition-all duration-300" onerror="this.style.display='none'">
     <h1 class="sr-only">Réseau des prêteurs privés du Québec</h1>
 </div>
 
@@ -75,74 +75,90 @@
                 <br> <br> <br> <br>
                  <div class="flex items-center w-full max-w-xl mx-auto mb-8 relative z-10">
                     <div class="flex-grow border-t border-white/10"></div>
-                    <span class="flex-shrink-0 px-6 text-sm text-white tracking-widest uppercase font-medium">Veuillez sélectionner votre objectif</span>
+                    <span class="flex-shrink-0 px-6 text-sm text-gray-300 tracking-widest uppercase font-medium">Veuillez sélectionner votre objectif</span>
                     <div class="flex-grow border-t border-white/10"></div>
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4 w-full max-w-2xl relative z-10">
-                    <button onclick="switchView('investisseur-view')" class="flex-1 text-center border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 px-6 py-5 rounded-sm transition-colors duration-300 group">
-                        <span class="text-md font-medium text-snow group-hover:text-white transition-colors">Je cherche un prêt privé</span>
-                    </button>
+                  <div class="flex flex-col sm:flex-row gap-4 w-full max-w-2xl relative z-10">
+    <button onclick="switchView('investisseur-view')" class="flex-1 text-center border border-white/20 bg-gray-200 hover:bg-white/5 backdrop-blur-sm px-6 py-5 rounded-sm transition-all duration-300 group">
+        <span class="text-md font-medium text-navy group-hover:text-snow transition-colors duration-300">Je cherche un prêt privé</span>
+    </button>
 
-                    <button onclick="switchView('preteur-view')" class="flex-1 text-center border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 px-6 py-5 rounded-sm transition-colors duration-300 group">
-                        <span class="text-md font-large text-snow group-hover:text-white transition-colors">Je veux offrir un prêt privé</span>
-                    </button>
+    <button onclick="switchView('preteur-view')" class="flex-1 text-center border border-white/20 bg-gray-200 hover:bg-white/5 backdrop-blur-sm px-6 py-5 rounded-sm transition-all duration-300 group">
+        <span class="text-md font-medium text-navy group-hover:text-snow transition-colors duration-300">Je veux offrir des prêts privés</span>
+    </button>
+</div>
                 </div>
             </div>
 
-    <section id="about" class="w-full mt-16 pt-16 border-t border-white/10">
-    <div class="mb-12 text-center md:text-left">
-        <h2 class="text-3xl md:text-4xl font-bold">À propos de RPPQ</h2>
+<section id="about" class="w-full mt-16 pt-16 border-t border-white/10">
+    <div class="flex items-center w-full mb-12">
+        <h2 class="flex-shrink-0 pr-4 text-white tracking-widest text-2xl uppercase font-bold text-left">À propos de RPPQ</h2>
+
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        <div class="text-gray-300 leading-relaxed space-y-8 text-sm md:text-base">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
         
+        <div class="text-gray-300 leading-relaxed space-y-8 text-sm md:text-base flex flex-col justify-center">
             <div class="pt-3">
-                
-                <h3 class="text-white font-semibold uppercase tracking-widest text-md mb-3 ">Mission</h3>
+                <h3 class="text-white font-semibold uppercase tracking-widest text-md mb-3">Mission</h3>
                 <p class="text-gray-300">
                     Structurer et sécuriser l’accès au prêt privé en connectant les investisseurs immobiliers et les prêteurs privés au sein d’un réseau rigoureux, rapide et professionnel, sélectionnés à travers la province du Québec.
                 </p>
             </div>
 
             <div>
-                <h3 class="text-white font-semibold uppercase tracking-widest text-md mb-3 ">Vision</h3>
-                <p class="text-gray-300 font-medium text-l ">
+                <h3 class="text-white font-semibold uppercase tracking-widest text-md mb-3">Vision</h3>
+                <p class="text-gray-300 font-medium text-l">
                     Devenir la référence du prêt privé au Québec en établissant les plus hauts standards de qualité, d’efficacité et de confiance dans l’industrie.
                 </p>
             </div>
 
             <div>
-                <h3 class="text-white font-semibold uppercase tracking-widest text-md mb-4 ">Valeurs</h3>
+                <h3 class="text-white font-semibold uppercase tracking-widest text-md mb-4">Valeurs</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <div>
                         <span class="text-white block mb-1">Rapidité</span>
-                        <p class="text-sm text-gray-300">Une exécution  adaptée au marché immobilier.</p>
+                        <p class="text-sm text-gray-300">Une exécution adaptée au marché immobilier.</p>
                     </div>
                     <div>
-                        <span class="text-white  block mb-1">Rigueur</span>
+                        <span class="text-white block mb-1">Rigueur</span>
                         <p class="text-sm text-gray-300">Une analyse structurée et des standards élevés.</p>
                     </div>
                     <div>
-                        <span class="text-white  block mb-1">Sécurité</span>
+                        <span class="text-white block mb-1">Sécurité</span>
                         <p class="text-sm text-gray-300">Un cadre fiable et transparent.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="space-y-4">
-            <div class="flex items-center w-full mb-6">
-                <div class="flex-grow border-t border-white/10"></div>
-                <span class="flex-shrink-0 px-4  text-white tracking-widest text-xl uppercase font-bold text-center">Découvrez les avantages du réseau</span>
-                <div class="flex-grow border-t border-white/10"></div>
+        <div class="w-full min-h-[350px] relative rounded-sm border border-white/10 bg-white/5 flex items-center justify-center overflow-hidden">
+            <span class="text-gray-500 tracking-widest uppercase text-sm font-medium">Image Placeholder 1</span>
+        </div>
+
+        <div class="flex flex-col w-full h-full">
+            <div class="hidden lg:block w-full mb-11 invisible pointer-events-none" aria-hidden="true">
+                <span class="block text-white tracking-widest text-l uppercase font-bold text-left">Découvrez les avantages du réseau</span>
+            </div>
+        
+        
+
+            <div class="w-full flex-grow min-h-[350px] relative rounded-sm border border-white/10 bg-white/5 flex items-center justify-center overflow-hidden">
+                <span class="text-gray-500 tracking-widest uppercase text-sm font-medium">Image Placeholder 2</span>
+            </div>
+        </div>
+
+        <div class="space-y-4 flex flex-col justify-start">
+            <div class="w-full mb-6">
+                <h2 class="block text-white tracking-widest text-xl uppercase font-bold text-left">Découvrez les avantages du réseau</h2>
             </div>
 
-            <div class="p-6 bg-white/5 border border-white/10 rounded-sm transition-colors ">
+            <div class="p-6 bg-white/5 border border-white/10 rounded-sm transition-colors">
                 <h4 class="text-white font-semibold mb-2 uppercase tracking-wider text-sm">Pour les investisseurs immobiliers</h4>
                 <p class="text-sm mb-3 text-gray-300 leading-relaxed">Accédez à un financement sur mesure et accélérez vos projets grâce à notre réseau de prêteurs qualifiés.</p>
                 
-                <button onclick="switchView('investisseur-view')" class=" mt-4 inline-flex items-center text-xs tracking-widest uppercase text-white font-semibold hover:text-gray-300 transition-colors group">
+                <button onclick="switchView('investisseur-view')" class="mt-4 inline-flex items-center text-xs tracking-widest uppercase text-white font-semibold hover:text-gray-300 transition-colors group">
                     En savoir plus
                     <span class="ml-2 transform group-hover:translate-x-1 transition-transform">&rarr;</span>
                 </button>
@@ -158,6 +174,7 @@
                 </button>
             </div>
         </div>
+
     </div>
 </section>
         </div> 
