@@ -178,10 +178,9 @@
         </div> 
 
         <!-- Investisseur -->
-        <div id="investisseur-view" class="view-section hidden flex-col justify-start w-full max-w-7xl mx-auto min-h-[70vh] opacity-0 translate-y-8">
+      <div id="investisseur-view" class="view-section hidden flex-col justify-start w-full max-w-7xl mx-auto min-h-[70vh] opacity-0 translate-y-8">
             <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start w-full relative">
                 
-                <!-- Colonne de gauche (Contenu texte) -->
                 <div class="flex-1 lg:w-3/5 flex flex-col items-start justify-start w-full">
                     
                     <div class="mb-10 w-full">
@@ -225,12 +224,11 @@
 
                     </div>
 
-                    <button onclick="switchView('home-view')" class="mb-8 lg:mb-0 text-base text-white hover:text-gray-300 transition-colors flex items-center">
+                    <button onclick="switchView('home-view')" class="hidden lg:flex text-base text-white hover:text-gray-300 transition-colors items-center">
                         &larr; Retour à l'accueil
                     </button>
                 </div>
 
-                <!-- Colonne de droite (CTA et Image) -->
                 <div class="flex-1 lg:w-2/5 flex flex-col w-full gap-8">
                     
                     <div class="w-full flex flex-col justify-between items-start border border-white/20 p-6 md:p-8 rounded-sm bg-white/5 gap-5">
@@ -243,6 +241,10 @@
                         </a>
                     </div>
 
+                    <button onclick="switchView('home-view')" class="flex lg:hidden text-base text-white hover:text-gray-300 transition-colors items-center">
+                        &larr; Retour à l'accueil
+                    </button>
+
                     <div class="hidden lg:block w-full h-[500px] relative">
                         <img src="./investisseur.jpeg" alt="Bureaux institutionnels" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm">
                         <div class="absolute inset-0 bg-navy/30 mix-blend-multiply rounded-sm"></div>
@@ -253,10 +255,9 @@
         </div>
 
         <!-- Preteur -->
-        <div id="preteur-view" class="view-section hidden flex-col justify-start w-full max-w-7xl mx-auto min-h-[70vh] opacity-0 translate-y-8">
+     <div id="preteur-view" class="view-section hidden flex-col justify-start w-full max-w-7xl mx-auto min-h-[70vh] opacity-0 translate-y-8">
             <div class="flex flex-col lg:flex-row-reverse gap-12 lg:gap-16 items-start w-full relative">
                 
-                <!-- Colonne de gauche (Contenu texte) -->
                 <div class="flex-1 lg:w-3/5 flex flex-col items-start justify-start w-full">
                     
                     <div class="mb-10 w-full">
@@ -303,12 +304,11 @@
 
                     </div>
 
-                    <button onclick="switchView('home-view')" class="mb-8 lg:mb-0 text-base text-white hover:text-gray-300 transition-colors flex items-center">
+                    <button onclick="switchView('home-view')" class="hidden lg:flex text-base text-white hover:text-gray-300 transition-colors items-center">
                         &larr; Retour à l'accueil
                     </button>
                 </div>
 
-                <!-- Colonne de droite (CTA et Image) -->
                 <div class="flex-1 lg:w-2/5 flex flex-col w-full gap-8">
                     
                     <div class="w-full flex flex-col justify-between items-start border border-white/20 p-6 md:p-8 rounded-sm bg-white/5 gap-5">
@@ -320,6 +320,10 @@
                             Soumettre une demande
                         </a>
                     </div>
+
+                    <button onclick="switchView('home-view')" class="flex lg:hidden text-base text-white hover:text-gray-300 transition-colors items-center">
+                        &larr; Retour à l'accueil
+                    </button>
 
                     <div class="hidden lg:block w-full h-[500px] relative">
                         <img src="./preteur.jpeg" alt="Architecture corporative" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm">
