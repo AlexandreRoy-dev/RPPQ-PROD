@@ -40,8 +40,10 @@
 <body class="min-h-screen flex flex-col relative z-0">
 
     <div class="fixed inset-0 z-[-1] pointer-events-none">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Architecture fond" class="w-full h-full object-cover opacity-[0.15] grayscale mix-blend-luminosity">
-        <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/60 to-navy/10"></div>
+        <!-- L'opacité de l'image de fond passe de 0.15 à 0.25 -->
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Architecture fond" class="w-full h-full object-cover opacity-[0.25] grayscale mix-blend-luminosity">
+        <!-- Le dégradé a été allégé -->
+        <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/50 to-transparent"></div>
     </div>
 
     <header class="w-full px-5 py-6 sm:px-12 flex justify-between items-center z-50 absolute top-0 left-0">
@@ -129,9 +131,10 @@
             </div>
 
             <div class="order-2 w-full min-h-[300px] md:min-h-[350px] mt-6 lg:mt-4 relative rounded-sm   flex items-center justify-center overflow-hidden">
-    <img src="./about.png" alt="À propos de RPPQ" class="w-full h-full object-cover absolute inset-0">
-    <div class="absolute inset-0 bg-navy/30 mix-blend-multiply pointer-events-none"></div>
-</div>
+                <img src="./about.png" alt="À propos de RPPQ" class="w-full h-full object-cover absolute inset-0">
+                <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
+                <div class="absolute inset-0 bg-navy/10 pointer-events-none"></div>
+            </div>
 
             <div class="order-4 lg:order-3 flex flex-col w-full h-full mt-8 lg:mt-0">
                 <div class="hidden lg:block w-full mb-11 invisible pointer-events-none" aria-hidden="true">
@@ -139,7 +142,8 @@
                 </div>
                 <div class="w-full flex-grow min-h-[300px] md:min-h-[350px] relative rounded-sm  flex items-center justify-center overflow-hidden">
                     <img src="./avantages.jpeg" alt="Les avantages du réseau" class="w-full h-full object-cover absolute inset-0">
-                    <div class="absolute inset-0 bg-navy/30 mix-blend-multiply pointer-events-none"></div>
+                    <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
+                    <div class="absolute inset-0 bg-navy/10 pointer-events-none"></div>
                 </div>
             </div>
 
@@ -183,6 +187,13 @@
                         <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl border-l-2 border-accent pl-4">
                             Par l'entremise de ses services de courtage, le RPPQ vous permet d’accéder rapidement à un réseau de prêteurs privés rigoureusement sélectionnés partout au Québec. Au lieu de devoir contacter plusieurs prêteurs individuellement, vous bénéficiez d’un point d’accès centralisé.
                         </p>
+                    </div>
+
+                    <!-- IMAGE AFFICHÉE SUR MOBILE -->
+                    <div class="block lg:hidden w-full h-[300px] relative mb-10">
+                        <img src="./investisseur.jpeg" alt="Bureaux institutionnels" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm">
+                        <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
+                        <div class="absolute inset-0 bg-navy/10 rounded-sm pointer-events-none"></div>
                     </div>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10 w-full mb-0 lg:mb-12">
@@ -240,10 +251,11 @@
                         &larr; Retour à l'accueil
                     </button>
 
-                    <!-- IMAGE AFFICHÉE SUR MOBILE AVEC HAUTEUR ADAPTÉE -->
-                    <div class="w-full h-[300px] lg:h-[500px] relative ">
+                    <!-- IMAGE AFFICHÉE SUR DESKTOP -->
+                    <div class="hidden lg:block w-full h-[500px] relative ">
                         <img src="./investisseur.jpeg" alt="Bureaux institutionnels" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm">
-                        <div class="absolute inset-0 bg-navy/30 mix-blend-multiply rounded-sm"></div>
+                        <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
+                        <div class="absolute inset-0 bg-navy/10 rounded-sm pointer-events-none"></div>
                     </div>
 
                 </div>
@@ -261,6 +273,13 @@
                         <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl border-l-2 border-accent pl-4">
                             Faites affaire avec une entreprise de courtage spécialisée, dédiée exclusivement au prêt privé. RPPQ agit comme filtre de qualité pour vous présenter des dossiers analysés, compatibles avec vos objectifs.
                         </p>
+                    </div>
+
+                    <!-- IMAGE AFFICHÉE SUR MOBILE -->
+                    <div class="block lg:hidden w-full h-[300px] relative mb-10">
+                        <img src="./preteur.jpeg" alt="Architecture corporative" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm">
+                        <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
+                        <div class="absolute inset-0 bg-navy/10 rounded-sm pointer-events-none"></div>
                     </div>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10 w-full mb-0 lg:mb-12">
@@ -321,10 +340,11 @@
                         &larr; Retour à l'accueil
                     </button>
 
-                    <!-- IMAGE AFFICHÉE SUR MOBILE AVEC HAUTEUR ADAPTÉE -->
-                    <div class="w-full h-[300px] lg:h-[500px] relative ">
+                    <!-- IMAGE AFFICHÉE SUR DESKTOP -->
+                    <div class="hidden lg:block w-full h-[500px] relative ">
                         <img src="./preteur.jpeg" alt="Architecture corporative" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm">
-                        <div class="absolute inset-0 bg-navy/30 mix-blend-multiply rounded-sm"></div>
+                        <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
+                        <div class="absolute inset-0 bg-navy/10 rounded-sm pointer-events-none"></div>
                     </div>
 
                 </div>
