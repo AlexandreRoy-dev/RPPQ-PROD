@@ -1,56 +1,62 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-CA">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RPPQ - Réseau des Prêteurs Privés du Québec</title>
+    <title>Réseau des Prêteurs Privés du Québec | RPPQ</title>
 
-    <!-- ================= SEO STANDARD ================= -->
-    <meta name="description" content="Le Réseau des Prêteurs Privés du Québec (RPPQ) est la référence en structuration de prêts privés. Nous connectons investisseurs immobiliers et prêteurs partenaires avec rapidité, rigueur et sécurité.">
+    <meta name="description" content="Le Réseau des Prêteurs Privés du Québec (RPPQ) structure et sécurise l’accès au prêt privé en connectant investisseurs immobiliers et prêteurs privés.">
     <meta name="keywords" content="prêt privé, prêteur privé Québec, financement immobilier, investissement immobilier, structuration de prêt privé, RPPQ, financement alternatif">
     <meta name="author" content="RPPQ">
     <link rel="canonical" href="https://rppq.ca/">
 
-    <!-- ================= OPEN GRAPH (Facebook, LinkedIn, Discord) ================= -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_CA">
+    <meta property="og:site_name" content="Réseau des Prêteurs Privés du Québec">
     <meta property="og:url" content="https://rppq.ca/">
-    <meta property="og:title" content="RPPQ - La référence du prêt privé au Québec">
-    <meta property="og:description" content="Accédez à un réseau exclusif de prêteurs privés pour vos projets immobiliers au Québec. Une approche centralisée pour un financement rapide, rigoureux et sécurisé.">
-    
-    <!-- Image de partage social (Doit être absolue) -->
-    <meta property="og:image" content="https://rppq.ca/socialshare.png">
+    <meta property="og:title" content="Réseau des Prêteurs Privés du Québec | RPPQ">
+    <meta property="og:description" content="Le Réseau des Prêteurs Privés du Québec (RPPQ) structure et sécurise l’accès au prêt privé en connectant investisseurs immobiliers et prêteurs privés.">
+    <meta property="og:image" content="https://rppq.ca/socialshare.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:alt" content="Logo et présentation du Réseau des Prêteurs Privés du Québec">
 
-    <!-- ================= TWITTER / X CARDS ================= -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://rppq.ca/">
-    <meta name="twitter:title" content="RPPQ - Réseau des Prêteurs Privés du Québec">
-    <meta name="twitter:description" content="Accédez à un réseau exclusif de prêteurs privés pour vos projets immobiliers au Québec. Financement rapide, rigoureux et sécurisé.">
-    <meta name="twitter:image" content="https://rppq.ca/socialshare.png">
+    <meta name="twitter:title" content="Réseau des Prêteurs Privés du Québec | RPPQ">
+    <meta name="twitter:description" content="Le Réseau des Prêteurs Privés du Québec (RPPQ) structure et sécurise l’accès au prêt privé en connectant investisseurs immobiliers et prêteurs privés.">
+    <meta name="twitter:image" content="https://rppq.ca/socialshare.jpg">
+    <meta name="twitter:image:alt" content="Logo et présentation du Réseau des Prêteurs Privés du Québec">
 
-    <!-- ================= ASSETS & STYLES ================= -->
-     <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: '#071630', 
-                        snow: '#FFFAFA',
-                        accent: '#3b82f6', 
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/css/tailwind.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://rppq.ca/#organization",
+      "name": "Réseau des Prêteurs Privés du Québec",
+      "alternateName": "RPPQ",
+      "legalName": "Alexandre Bertrand, entreprise individuelle f.a.s.r.s. notamment sous le nom de Réseau des Prêteurs Privés du Québec",
+      "url": "https://rppq.ca/",
+      "logo": "https://rppq.ca/logo.png",
+      "image": "https://rppq.ca/socialshare.jpg",
+      "description": "Structurer et sécuriser l’accès au prêt privé en préparant des dossiers solides et en connectant les investisseurs immobiliers et les prêteurs privés au sein d’un réseau rigoureux, rapide et professionnel, sélectionnés à travers la province du Québec.",
+      "telephone": "+1-450-300-0880",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Québec"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Responsable de la protection des renseignements personnels",
+        "name": "Alexandre Bertrand",
+        "email": "confidentialite@rppq.ca",
+        "availableLanguage": "French"
+      }
+    }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
@@ -72,15 +78,14 @@
 
     <div class="fixed inset-0 z-[-1] pointer-events-none">
         <!-- L'opacité de l'image de fond passe de 0.15 à 0.25 -->
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Architecture fond" class="w-full h-full object-cover opacity-[0.25] grayscale mix-blend-luminosity">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=70&amp;w=1600&amp;auto=format&amp;fit=crop" alt="" class="w-full h-full object-cover opacity-[0.25] grayscale mix-blend-luminosity">
         <!-- Le dégradé a été allégé -->
         <div class="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/50 to-transparent"></div>
     </div>
 
     <header class="w-full px-5 py-6 sm:px-12 flex justify-between items-center z-50 absolute top-0 left-0">
         <div class="cursor-pointer flex items-center gap-4" onclick="switchView('home-view')">
-            <img src="logo.png" alt="Logo RPPQ" class="h-20 md:h-24 lg:h-30 w-auto object-contain transition-all duration-300" onerror="this.style.display='none'">
-            <h1 class="sr-only">Réseau des prêteurs privés du Québec</h1>
+            <img src="/logo.png" alt="Logo du Réseau des Prêteurs Privés du Québec" width="2012" height="899" class="h-20 md:h-24 lg:h-30 w-auto object-contain transition-all duration-300" onerror="this.style.display='none'">
         </div>
 
         <div class="flex items-center">
@@ -99,7 +104,7 @@
             
             <div class="min-h-[70vh] flex flex-col items-center justify-center w-full mt-12 md:mt-20">
                 <div class="text-center mb-12 md:mb-16 relative px-4">
-                    <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 md:mb-8 leading-tight">La référence du prêt privé au Québec</h2>
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 md:mb-8 leading-tight">La référence du prêt privé au Québec</h1>
                     <p class="text-sm md:text-lg tracking-widest uppercase text-gray-300">Réseau des Prêteurs Privés du Québec</p>
                 </div>
                 
@@ -162,7 +167,7 @@
             </div>
 
             <div class="order-2 w-full min-h-[300px] md:min-h-[350px] mt-6 lg:mt-4 relative rounded-sm   flex items-center justify-center overflow-hidden">
-                <img src="./about.png" alt="À propos de RPPQ" class="w-full h-full object-cover absolute inset-0">
+                <img src="/about.webp" alt="Deux personnes en réunion dans un bureau, devant un écran d’ordinateur" width="1920" height="1080" class="w-full h-full object-cover absolute inset-0" decoding="async" loading="lazy">
                 <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
                 <div class="absolute inset-0 bg-navy/10 pointer-events-none"></div>
             </div>
@@ -172,7 +177,7 @@
                     <span class="block text-white tracking-widest text-2xl uppercase font-bold text-left">les avantages du réseau</span>
                 </div>
                 <div class="w-full flex-grow min-h-[300px] md:min-h-[350px] relative rounded-sm  flex items-center justify-center overflow-hidden">
-                    <img src="./avantages.jpeg" alt="Les avantages du réseau" class="w-full h-full object-cover absolute inset-0">
+                    <img src="/avantages.webp" alt="Façade vitrée d’un immeuble moderne" width="1920" height="1047" class="w-full h-full object-cover absolute inset-0" decoding="async" loading="lazy">
                     <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
                     <div class="absolute inset-0 bg-navy/10 pointer-events-none"></div>
                 </div>
@@ -222,7 +227,7 @@
 
                     <!-- IMAGE AFFICHÉE SUR MOBILE -->
                     <div class="block lg:hidden w-full h-[300px] relative mb-10">
-                        <img src="./investisseur.jpeg" alt="Bureaux institutionnels" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm">
+                        <img src="/investisseur.webp" alt="Personne en chemise blanche devant un ordinateur portable qui affiche des immeubles" width="1920" height="1076" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm" decoding="async" loading="lazy">
                         <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
                         <div class="absolute inset-0 bg-navy/10 rounded-sm pointer-events-none"></div>
                     </div>
@@ -284,7 +289,7 @@
 
                     <!-- IMAGE AFFICHÉE SUR DESKTOP -->
                     <div class="hidden lg:block w-full h-[500px] relative ">
-                        <img src="./investisseur.jpeg" alt="Bureaux institutionnels" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm">
+                        <img src="/investisseur.webp" alt="Personne en chemise blanche devant un ordinateur portable qui affiche des immeubles" width="1920" height="1076" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm" decoding="async" loading="lazy">
                         <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
                         <div class="absolute inset-0 bg-navy/10 rounded-sm pointer-events-none"></div>
                     </div>
@@ -308,7 +313,7 @@
 
                     <!-- IMAGE AFFICHÉE SUR MOBILE -->
                     <div class="block lg:hidden w-full h-[300px] relative mb-10">
-                        <img src="./preteur.jpeg" alt="Architecture corporative" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm">
+                        <img src="/preteur.webp" alt="Immeuble en pierre avec un portique à colonnes" width="1920" height="1280" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm" decoding="async" loading="lazy">
                         <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
                         <div class="absolute inset-0 bg-navy/10 rounded-sm pointer-events-none"></div>
                     </div>
@@ -373,7 +378,7 @@
 
                     <!-- IMAGE AFFICHÉE SUR DESKTOP -->
                     <div class="hidden lg:block w-full h-[500px] relative ">
-                        <img src="./preteur.jpeg" alt="Architecture corporative" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm">
+                        <img src="/preteur.webp" alt="Immeuble en pierre avec un portique à colonnes" width="1920" height="1280" class="w-full h-full object-cover opacity-100 border border-white/10 rounded-sm" decoding="async" loading="lazy">
                         <!-- Retrait de mix-blend-multiply et baisse à bg-navy/10 -->
                         <div class="absolute inset-0 bg-navy/10 rounded-sm pointer-events-none"></div>
                     </div>
@@ -388,7 +393,7 @@
         <div class="text-[10px] md:text-xs text-gray-400/60 max-w-2xl font-light">
             Alexandre Bertrand, entreprise individuelle f.a.s.r.s. notamment sous le nom de Réseau des Prêteurs Privés du Québec.
         </div>
-        <a href="politique-de-confidentialite.html" class="text-xs md:text-sm text-gray-300 hover:text-white transition-colors uppercase tracking-widest">
+        <a href="/politique-de-confidentialite.html" class="text-xs md:text-sm text-gray-300 hover:text-white transition-colors uppercase tracking-widest">
             Confidentialité & Mentions légales
         </a>
     </footer>
@@ -398,7 +403,7 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8">
             <div class="text-sm text-gray-300 flex-1">
                 Nous utilisons des témoins (cookies) pour améliorer votre expérience de navigation et analyser le trafic. 
-                Pour en savoir plus, consultez notre <a href="politique-de-confidentialite.html" class="text-white underline hover:text-gray-300 transition-colors">Politique de confidentialité</a>.
+                Pour en savoir plus, consultez notre <a href="/politique-de-confidentialite.html" class="text-white underline hover:text-gray-300 transition-colors">Politique de confidentialité</a>.
             </div>
             <div class="flex gap-3 w-full md:w-auto">
                 <button onclick="closeCookieBanner('refused')" class="flex-1 md:flex-none px-6 py-2.5 border border-white/30 text-white text-sm font-medium hover:bg-white/10 transition-colors rounded-sm whitespace-nowrap">
